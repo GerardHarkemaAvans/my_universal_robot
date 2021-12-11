@@ -25,7 +25,7 @@
   <arg name="gazebo_gui" default="true"/>
   <arg name="paused" default="false"/>
   <!-- By default, use the urdf location provided from the package -->
-  <arg name="urdf_path" default="$(find my_ur_description)/urdf/ur5_robot.urdf.xacro"/>
+  <arg name="urdf_path" default="$(find my_ur_description)/urdf/ur5/ur5_robot.urdf.xacro"/>
 
   <!-- launch the gazebo simulator and spawn the robot -->
   <include file="$(find my_ur5_moveit_config)/launch/gazebo.launch" >
@@ -35,7 +35,7 @@
   </include>
 
   <!-- If needed, broadcast static tf for robot root -->
-  
+
 
   <!-- We do not have a robot connected, so publish fake joint states -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" unless="$(arg use_gui)">
