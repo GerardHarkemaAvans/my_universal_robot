@@ -58,7 +58,7 @@
     <visual>
       <origin xyz="0 0 0.0" />
       <geometry>
-        <box size="1.1 0.7 0.03" />
+        <box size="0.7 1.1 0.03" />
       </geometry>
       <material name="LightGrey"/>
     </visual>
@@ -89,7 +89,7 @@
   </link>
 
   <joint name="mountingplate_joint" type="fixed">
-    <origin xyz="0.0 -0.20 0.021" />
+    <origin xyz="-0.2 0.0 0.021" />
     <parent link="baseplate_link" />
     <child link="mountingplate_link" />
   </joint>
@@ -98,7 +98,16 @@
   <joint name="mountingplate_link" type="fixed">
     <parent link="mountingplate_link" />
     <child link="base_link" />
-    <origin xyz="0.0 0.0 0.01" rpy="0.0 0.0 ${-pi/2}"/>
+    <origin xyz="0.0 0.0 0.01" rpy="0.0 0.0 ${pi}"/>
   </joint>
+
+  <!-- robot to mouting_plate. -->
+  <link name="tool_link" />
+  <joint name="tool0_link" type="fixed">
+    <parent link="tool0" />
+    <child link="tool_link" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 ${pi} ${pi/2}"/>
+  </joint>
+
 
 </robot>
