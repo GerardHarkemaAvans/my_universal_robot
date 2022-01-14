@@ -101,11 +101,11 @@
     <origin xyz="0.0 0.0 0.01" rpy="0.0 0.0 ${pi}"/>
   </joint>
 
-  <!-- robot to mouting_plate. -->
-  <link name="tool_link" />
+  <!-- tool center point -->
+  <link name="tcp_link" />
   <joint name="tool0_link" type="fixed">
     <parent link="tool0" />
-    <child link="tool_link" />
+    <child link="tcp_link" />
     <origin xyz="0.0 0.0 0.0" rpy="0.0 ${pi} ${pi/2}"/>
   </joint>
 

@@ -13,6 +13,6 @@
   <group if="$(arg sim)">
     <include file="$(find my_ur5_moveit_config)/launch/demo.launch"/>
   </group>
-  <node pkg="tf2_ros" type="static_transform_publisher" name="test_broadcaster" args="0.20 0.15 0.15 0 0 0 1 world ik_testpoint" />
+  <node pkg="tf2_ros" type="static_transform_publisher" name="test_broadcaster" args="0.20 0.3 0.15 0 0 0 1 world ik_testpoint" />
 
 </launch>
