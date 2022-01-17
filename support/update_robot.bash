@@ -1,11 +1,11 @@
 #!/bin/bash
 
 
-cd $HOME/niryo_robot_ws/src
+cd $HOME/universal_robots_ws/src
 echo "Updating urdf of robot..."
-sshpass -p robotics scp -r my_niryo_robot/my_niryo_robot_description/urdf niryo@$ROS_MASTER:/home/niryo/catkin_ws/src/my_niryo_robot/my_niryo_robot_description
+sshpass -p ur5 scp -r my_universal_robots/my_ur_description/urdf ur5@$ROS_MASTER:/home/niryo/catkin_ws/src/my_universal_robots/my_ur_description
 
 echo "Updating moveit config of robot..."
-sshpass -p robotics scp -r my_niryo_robot/my_niryo_ned_moveit_config/config niryo@$ROS_MASTER:/home/niryo/catkin_ws/src/my_niryo_robot/my_niryo_ned_moveit_config
+sshpass -p ur5 scp -r my_universal_robots/my_ur5_moveit_config/config ur5@$ROS_MASTER:/home/niryo/catkin_ws/src/my_universal_robots/my_ur5_moveit_config
 
 echo "Ready"
