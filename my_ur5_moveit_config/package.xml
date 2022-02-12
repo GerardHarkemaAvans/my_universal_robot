@@ -10,7 +10,7 @@
   <maintainer email="g.a.vanderhoorn@tudelft.nl">G.A. vd. Hoorn</maintainer>
   <maintainer email="miguel.prada@tecnalia.com">Miguel Prada Sarasola</maintainer>
   <maintainer email="nhg@ipa.fhg.de">Nadia Hammoudeh Garcia</maintainer>
-  
+
   <license>BSD</license>
 
   <url type="website">http://moveit.ros.org/</url>
@@ -30,5 +30,5 @@
 
   <test_depend>roslaunch</test_depend>
   <buildtool_depend>catkin</buildtool_depend>
-  
+
 </package>

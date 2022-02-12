@@ -4,7 +4,8 @@
   <include file="$(find my_ur5_moveit_config)/launch/ur5_moveit_planning_execution.launch">
   </include>
 
+<!--
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find my_universal_robot_controllers)/config/rviz.rviz" required="true" />
-
+-->
 
 </launch>
