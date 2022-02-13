@@ -5,7 +5,7 @@
 
   <!-- startup ros_control for real robot -->
   <group unless="$(arg sim)">
-    <include file="$(find my_niryo_robot_bringup)/launch/moveit_multimachines.launch"/>
+    <include file="$(find my_universal_robots_controllers)/launch/ur_control.launch"/>
     <include file="$(find my_niryo_rviz)/launch/rviz.launch"/>
   </group>
 
