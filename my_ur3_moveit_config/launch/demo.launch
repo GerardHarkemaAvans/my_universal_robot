@@ -14,6 +14,9 @@
   <!-- By default, we will load or override the robot_description -->
   <arg name="load_robot_description" default="true"/>
 
+  <!-- Set execution mode for fake execution controllers -->
+  <arg name="execution_type" default="interpolate" />
+
   <!--
   By default, hide joint_state_publisher's GUI
 
