@@ -4,8 +4,9 @@
   <include file="$(find my_ur5_moveit_config)/launch/ur5_moveit_planning_execution.launch">
   </include>
 
+<!--
   <include file="$(find my_ur5_moveit_config)/launch/moveit_rviz.launch" if="$(arg use_rviz)">
     <arg name="rviz_config" value="$(find my_universal_robots_controllers)/config/rviz.rviz"/>
   </include>
-
+-->
 </launch>
