@@ -3,9 +3,7 @@ Panels:
     Help Height: 84
     Name: Displays
     Property Tree Widget:
-      Expanded:
-        - /MotionPlanning1
-        - /TF1
+      Expanded: ~
       Splitter Ratio: 0.7425600290298462
     Tree Height: 389
   - Class: rviz/Help
@@ -285,7 +283,7 @@ Visualization Manager:
         shoulder_link:
           Value: false
         tcp_link:
-          Value: false
+          Value: true
         tool0:
           Value: false
         upper_arm_link:
@@ -356,10 +354,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.004797209985554218
+      Pitch: 0.32479703426361084
       Target Frame: world
       Value: XYOrbit (rviz)
-      Yaw: 0.0017724037170410156
+      Yaw: 5.464955806732178
     Saved: ~
 Window Geometry:
   Displays:
