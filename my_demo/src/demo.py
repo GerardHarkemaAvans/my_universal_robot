@@ -16,19 +16,34 @@ robot=moveit_commander.RobotCommander()
 scene=moveit_commander.PlanningSceneInterface()
 group=moveit_commander.MoveGroupCommander('arm')
 display_trajectory_publisher=rospy.Publisher('/move_group/display_planned_path',moveit_msgs.msg.DisplayTrajectory)
-posetarget=geometry_msgs.msg.PoseStamped()
 
+print("== go to home ==")
+target_values= group.get_named_target_values("home")
+group.go(target_values, wait = True)
+
+print("== go to left ==")
+target_values= group.get_named_target_values("left")
+group.go(target_values, wait = True)
+
+print("== move down, 50 mm ==")
 pose=group.get_current_pose()
-print("posetarget" ,pose)
-
 posetarget = pose
-posetarget.pose.position.x+=0.05
-
-print(posetarget)
+posetarget.pose.position.z-=0.05
 group.set_pose_target(posetarget)
 plan=group.plan()
 group.go(wait=True)
 
-pose=group.get_current_pose()
-print(pose)
+print("== go to right ==")
+target_values= group.get_named_target_values("right")
+group.go(target_values, wait = True)
+
+print("== go to home ==")
+target_values= group.get_named_target_values("home")
+group.go(target_values, wait = True)
+
+print("== go to resting ==")
+target_values= group.get_named_target_values("resting")
+group.go(target_values, wait = True)
+
+print("== ready ==")
 
